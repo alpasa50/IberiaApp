@@ -43,11 +43,7 @@ class _ContadorPageState extends State<ContadorPage> {
     
   }
 
-}
-
-
-
-Widget _crearBotones(){
+  Widget _crearBotones(){
  return Row(
    mainAxisAlignment: MainAxisAlignment.end,
    children: [
@@ -55,10 +51,18 @@ Widget _crearBotones(){
      SizedBox(width: 60,),
      FloatingActionButton(onPressed: () {}, child: Icon(Icons.remove)),
      SizedBox(width: 90,),
-     FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+     FloatingActionButton(onPressed: _agregar, child: Icon(Icons.add)),
      SizedBox(width: 30,),
    ],
  );
-
- 
 }
+
+void _agregar(){
+  setState(() => conteo++);
+}
+}
+
+
+
+
+
